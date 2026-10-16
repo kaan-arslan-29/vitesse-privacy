@@ -9,18 +9,20 @@
        Sistem yazı tipine düşülür (font-family fallback zinciri zaten mevcut). -->
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* Sınıf stilleri (ör. .hero-cta display) gizleme özniteliğini ezmesin. */
+    [hidden] { display: none !important; }
 
     :root {
-      --bg: #0a0a12;
-      --bg2: #111120;
-      --surface: #16162a;
-      --border: #22223a;
-      --accent: #7c6bff;
-      --accent-dim: rgba(124,107,255,0.12);
-      --accent-glow: rgba(124,107,255,0.25);
-      --text: #f0f0fa;
-      --text-2: #9898b8;
-      --text-dim: #55556a;
+      --bg: #0E0F11;
+      --bg2: #1A1C1F;
+      --surface: #16181B;
+      --border: #2A2D32;
+      --accent: #F2A93B;
+      --accent-dim: rgba(242,169,59,0.12);
+      --accent-glow: rgba(242,169,59,0.25);
+      --text: #F3F1EC;
+      --text-2: #A9A59C;
+      --text-dim: #8E8A81;
     }
 
     html { scroll-behavior: smooth; }
@@ -49,7 +51,7 @@
       width: 600px;
       height: 600px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(124,107,255,0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(242,169,59,0.12) 0%, transparent 70%);
       top: -200px;
       left: 50%;
       transform: translateX(-50%);
@@ -68,7 +70,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 16px 32px;
-      background: rgba(10,10,18,0.7);
+      background: rgba(14,15,17,0.7);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(255,255,255,0.04);
     }
@@ -82,7 +84,7 @@
       font-size: 20px;
       font-weight: 900;
       letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #ffffff, #a89eff);
+      background: linear-gradient(135deg, #ffffff, #F7C46E);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -114,8 +116,8 @@
       align-items: center;
       gap: 6px;
       background: var(--accent-dim);
-      border: 1px solid rgba(124,107,255,0.3);
-      color: #a89eff;
+      border: 1px solid rgba(242,169,59,0.3);
+      color: #F7C46E;
       font-size: 12px;
       font-weight: 600;
       padding: 5px 14px;
@@ -132,7 +134,7 @@
       margin-bottom: 20px;
     }
     .hero h1 span {
-      background: linear-gradient(135deg, #a89eff, #7c6bff, #5b4fff);
+      background: linear-gradient(135deg, #F7C46E, #F2A93B, #D88A16);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -151,14 +153,14 @@
       align-items: center;
       gap: 8px;
       background: var(--accent);
-      color: #fff;
+      color: #1A1206;
       font-size: 15px;
       font-weight: 600;
       padding: 14px 28px;
       border-radius: 14px;
       text-decoration: none;
       transition: opacity 0.2s, transform 0.2s;
-      box-shadow: 0 4px 24px rgba(124,107,255,0.35);
+      box-shadow: 0 4px 24px rgba(242,169,59,0.35);
     }
     .hero-cta:hover { opacity: 0.9; transform: translateY(-1px); }
 
@@ -232,7 +234,7 @@
       transition: border-color 0.2s, transform 0.2s;
     }
     .feature-card:hover {
-      border-color: rgba(124,107,255,0.4);
+      border-color: rgba(242,169,59,0.4);
       transform: translateY(-2px);
     }
     .feature-card-icon {
@@ -267,8 +269,8 @@
       padding: 0 24px;
     }
     .cta-inner {
-      background: linear-gradient(135deg, rgba(124,107,255,0.15), rgba(91,79,255,0.08));
-      border: 1px solid rgba(124,107,255,0.25);
+      background: linear-gradient(135deg, rgba(242,169,59,0.15), rgba(242,169,59,0.08));
+      border: 1px solid rgba(242,169,59,0.25);
       border-radius: 24px;
       padding: 48px 40px;
       text-align: center;
@@ -332,6 +334,7 @@
   <!-- Nav -->
   <nav>
     <a class="nav-logo" href="#">
+      <svg width="32" height="32" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke-width="9" stroke-linecap="round" stroke-dasharray="38 125.4"><circle cx="50" cy="50" r="26" stroke="#F2A93B" transform="rotate(-150 50 50)"/><circle cx="50" cy="50" r="26" stroke="#F7C46E" transform="rotate(-30 50 50)"/><circle cx="50" cy="50" r="26" stroke="#8E8A81" transform="rotate(90 50 50)"/></g><path d="M41 42 50 59 59 42" fill="none" stroke="#F3F1EC" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span class="nav-logo-name">Vitesse</span>
     </a>
     <div class="nav-links">
