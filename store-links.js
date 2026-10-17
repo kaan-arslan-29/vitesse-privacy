@@ -4,7 +4,7 @@
   // Mağaza kaydı oluştuğunda yalnız bu merkezi değeri güncelleyin. Boş veya
   // beklenen Vitesse paketine ait olmayan adres, yer tutucu düğmeleri açmaz.
   const GOOGLE_PLAY_URL = '';
-  const expectedPackage = 'com.aria.vitesse';
+  const expectedPackage = 'com.prismsoftware.vitesse';
   let parsed;
   try {
     parsed = new URL(GOOGLE_PLAY_URL);
